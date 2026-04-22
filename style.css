@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --p-clr: #278da3;
+    --font-size: 18px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hide {
+    display: none;
+}
+
+.heading1 {
+    font-size: 52px;
+    color: #fefefe;
+}
+
+.heading2 {
+    font-size: 32px;
+}
+
+.mainContainer {
+    padding: 50px 60px;
+}
+.text{
+    font-size: var(--font-size);
+}
+@media only screen and (max-width: 768px) {
+    .heading1 {
+        font-size: 40px;
+    }
+
+    .mainContainer {
+        padding: 50px 40px;
+    }
+    :root {
+    --font-size: 16px;
+}
+}
+
+@media only screen and (max-width: 550px) {
+    .heading1 {
+        font-size: 32px;
+    }
+
+    .mainContainer {
+        padding: 50px 30px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .heading1 {
+        font-size: 34px;
+    }
+
+    .mainContainer {
+        padding: 50px 20px;
+    }
+}
+
+
+/* navbar */
+
+nav {
+    padding: 24px 80px;
+    background-color: #fefefe;
+}
+
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--p-clr);
+    align-items: center;
+
+}
+
+.navLeft .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navRight ul {
+    display: flex;
+    gap: 24px;
+    font-size: var(--font-size);
+}
+
+.navRight ul li,
+.resNav ul li {
+    list-style: none;
+}
+
+.navRight ul li a,
+.resNav ul li a {
+    text-decoration: none;
+    color: var(--p-clr);
+}
+
+.rl1 {
+    display: none;
+}
+
+.rl2 {
+    transform: rotate(45deg);
+    position: relative;
+    right: -7px;
+}
+
+.rl3 {
+    transform: rotate(-45deg);
+    position: relative;
+    right: 6px;
+}
+
+.hamburger {
+    transform: rotate(90deg);
+}
+
+.hamburger button {
+    background: none;
+    border: none;
+    color: var(--p-clr);
+    font-size: 32px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.resNav {
+    position: absolute;
+    background-color: #272c35;
+    left: 0;
+    right: 0;
+    top: 86px;
+    padding: 24px 50px;
+    padding-right: 0px;
+    margin: 0;
+    background: #fefefe;
+}
+
+.resNav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: var(--font-size);
+}
+
+.resNav ul li {
+    width: max-content;
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        gap: 2px;
+    }
+
+    .navLeft .logo {
+        font-size: 24px;
+    }
+
+    .navRight {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 40px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav {
+        padding: 24px 20px;
+    }
+}
+
+/* hero section */
+
+#heroSection {
+    background-image: url("images/img1.jpg");
+    background-size: cover;
+    height: 90vh;
+}
+
+.heroContainer {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.whatsappBtn {
+    padding: 10px 14px;
+    background-color: var(--p-clr);
+    width: max-content;
+    color: #fefefe;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-top: 24px;
+    font-size: var(--font-size);
+}
+
+@media only screen and (max-width: 768px) {
+    #heroSection {
+        height: 60vh;
+    }
+}
+
+/* Why Us */
+.whyContainer .heading2 {
+    text-align: center;
+}
+
+.whyCards {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.whyCard {
+    padding: 20px;
+    border-radius: 12px;
+    width: 28%;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.whyCard .text {
+    margin-top: 12px;
+}
+
+.whyCard:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.whyCard:not(:hover) {
+    transform: scale(.95);
+    transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 1099px) {
+    .whyCard {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .whyCard {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .whyCard {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .whyCard {
+        width: 100%;
+    }
+}
+
+/* Our Treatments */
+
+.treatmentContainer .heading2 {
+    text-align: center;
+}
+
+.treatCards {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.cardImg img {
+    height: 270px;
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover;
+}
+
+.treatCard {
+    width: 18%;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.treatCard:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.treatCard:not(:hover) {
+    transform: scale(.95);
+    transition: all 0.3s ease;
+}
+
+.treatCard .heading3 {
+    margin-top: 18px;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1239px) {
+    .treatCard {
+        width: 22%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .treatCard {
+        width: 24%;
+    }
+}
+
+@media only screen and (max-width: 849px) {
+    .treatCard {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .treatCard {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .treatCard {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .treatCard {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .treatCard {
+        width: 100%;
+    }
+}
+
+/* Our Team */
+
+#team {
+    background-color: #e2f3fb;
+}
+
+.teamContainer .heading2 {
+    text-align: center;
+}
+
+.teamCards {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.teamCard {
+    display: flex;
+    /* gap: 12px; */
+    border-radius: 12px;
+    background-color: #fefefe;
+    width: max-content;
+    height: 120px;
+}
+
+.teamText {
+    padding: 12px;
+}
+
+.teamCard img {
+    width: 120px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.teamText span {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+@media only screen and (max-width: 460px) {
+    .teamCard {
+        flex-direction: column;
+        width: 200px;
+        text-align: center;
+        height: max-content;
+    }
+
+    .teamCard img {
+        width: 200px;
+        height: 200px;
+        border-radius: 12px 12px 0px 0px;
+    }
+}
+
+/* footer */
+
+#footer {
+    background-color: var(--p-clr);
+    color: #fefefe;
+}
+
+.footerOne p {
+    margin-top: 12px;
+}
+
+.footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.footerTwo span,
+.footerThree span {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerTwo span a {
+    text-decoration: none;
+    color: #fefefe
+}
+
+@media only screen and (max-width: 411px) {
+    .footerContainer{
+        flex-direction: column;
+        width: max-content;
+        justify-self: center;
+        align-items: flex-start;
+    }
+}
